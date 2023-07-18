@@ -168,7 +168,8 @@ section.four-phrase p {
     width: 50%;
 }
 
-section.four-phrase fieldset {
+section.four-phrase h4 {
+    border: 0px;
     padding: 20px;
     font-size: 15px;
     font-weight: 900;
