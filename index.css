@@ -176,6 +176,7 @@ section.four-phrase h4 {
     color: black;
 }
 
+
 section.four-phrase span {
     color: gray;
 }
@@ -200,7 +201,7 @@ section.five-new-products {
     margin-bottom: 2%;
 }
 
-.new_imges {
+.new_imges_products {
     width: 80%;
     display: flex;
     flex-flow: row wrap;
@@ -218,7 +219,9 @@ section.six-subscribe {
     text-align: center;
     margin-bottom: 5%;
     background-image: url(Imags/bg-2.jpg);
-    background-position: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35px;
     padding: 50px 0px 100px 0px;
     margin-bottom: 0%;
     width: 100%;
@@ -249,19 +252,10 @@ section.six-subscribe button {
     color: white;
 }
 
-section.five-latest-news {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 0px;
-    padding: 50px;
-    background-color: rgba(228, 228, 228, 0.555);
-    margin-bottom: 0%;
-}
 
 section.seven-latest-news {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     align-items: center;
     gap: 0px;
     padding: 0px;
@@ -271,25 +265,98 @@ section.seven-latest-news {
 }
 
 .head_section_seven {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    margin: 2% 0% 2% 0%;
     text-align: center;
-    width: 30%;
-    margin: auto;
-    margin-bottom: 2%;
-
 }
 
-.new_imges {
-    width: 80%;
+.new_imges_latest {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    gap: 40px;
+    gap: 0px;
     margin-bottom: 2%;
 }
+
+.new-1 {
+
+    width: 25%;
+
+}
+
+.date {
+    color: green;
+    font-weight: 600;
+    font-size: 15px;
+    font-style: italic;
+    text-decoration: underline;
+
+}
+
+.description {
+    width: 60%;
+}
+
+.new-1 span {
+    font-weight: 800;
+    text-decoration: underline;
+
+}
+
+section.brands {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding: 100px 0px 100px 0px;
+}
+
+section.brands img {
+    min-width: 25%;
+}
+
+footer {
+    width: 100%;
+}
+
+.cont-foot {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: none;
+    gap: 100px;
+
+}
+
+.cont-foot ul li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px 0px 10px 0px;
+    color: #a09fa0;
+
+}
+
+.cont-foot h5 {
+    font-size: medium;
+}
+
+.numbers-foot {
+
+    padding: 20px 10px 20px 0px;
+}
+
+.pay {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a09fa046;
+
+}
+
+.pay img {
+    width: 2.3%;
+}
+
 
 /* Responsive */
 
