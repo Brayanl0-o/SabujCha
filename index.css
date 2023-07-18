@@ -168,7 +168,7 @@ section.four-phrase p {
     width: 50%;
 }
 
-section.four-phrase legend {
+section.four-phrase fieldset {
     padding: 20px;
     font-size: 15px;
     font-weight: 900;
