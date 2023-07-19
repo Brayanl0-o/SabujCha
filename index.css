@@ -63,7 +63,6 @@ h1 {
 }
 
 a {
-
     text-decoration: underline;
     color: black;
     font-weight: 900;
@@ -159,7 +158,6 @@ section.four-phrase {
 
 section.four-phrase img {
     width: 5%;
-
 }
 
 section.four-phrase p {
@@ -262,7 +260,6 @@ section.seven-latest-news {
     background-image: url(Imags/bg-1.jpg);
     margin-bottom: 0%;
     width: 100%;
-
 }
 
 .head_section_seven {
@@ -280,7 +277,6 @@ section.seven-latest-news {
 
 .new-1 {
     flex: 0 0 25%;
-
 }
 
 .date {
@@ -289,7 +285,6 @@ section.seven-latest-news {
     font-size: 15px;
     font-style: italic;
     text-decoration: underline;
-
 }
 
 .description {
@@ -324,7 +319,6 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     font-weight: none;
     gap: 100px;
-
 }
 
 .cont-foot ul li {
@@ -332,7 +326,6 @@ footer {
     list-style: none;
     padding: 0px 0px 10px 0px;
     color: #a09fa0;
-
 }
 
 .cont-foot h5 {
@@ -340,7 +333,6 @@ footer {
 }
 
 .numbers-foot {
-
     padding: 20px 10px 20px 0px;
 }
 
@@ -350,7 +342,6 @@ footer {
     justify-content: space-around;
     align-items: center;
     background-color: #a09fa038;
-
 }
 
 .pay img {
@@ -494,8 +485,39 @@ footer {
         color: white;
     }
 
-}
+    section.brands img {
+        padding: 15px;
+    }
 
+    .cont-foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .cont-foot ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .pay {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: #a09fa038;
+        padding: 10px 0px 20px 0px;
+    }
+
+    .payment img {
+        width: 100%;
+    }
+
+}
 
 @media screen and (max-width: 528px) {
     section.one {
