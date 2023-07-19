@@ -24,8 +24,6 @@ The following technologies were used to build the SabujCha website:
 
 HTML
 CSS
-JavaScript
-
 
 License
 The SabujCha project is licensed under the MIT License.

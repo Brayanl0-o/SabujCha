@@ -1,0 +1,205 @@
+/* Background color body and layout settings */
+body {
+    background-color: rgba(29, 22, 121, 0);
+    margin: auto;
+    margin-top: 1%;
+}
+
+/* Style header. Including nav, list, logo, and right part header 
+    using Flexbox and positioning settings for the header */
+header,
+header ul,
+header li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1%;
+    align-items: center;
+    list-style: none;
+    padding: 0px 50px 0px 0px;
+}
+
+.logo {
+    margin-right: 40%;
+}
+
+.right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+
+}
+
+nav {
+    border-right: 2px black solid;
+    /* padding: 10px 0px 0px 10px; */
+    max-height: 5px;
+    padding: 0px 0px 10px 0px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+section.title-main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: auto;
+    gap: 0px;
+    width: 100%;
+    min-height: 500px;
+    background-image: url(Imags/taza-background.jpg);
+    background-position: center bottom;
+    background-size: cover;
+}
+
+/* Sub-elementos of the section.one */
+section.title-main h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 11.5%;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+    color: aliceblue;
+}
+
+section.title-main p {
+    color: white;
+    font-size: larger;
+}
+
+.product-presentation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5%;
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+
+}
+
+.details {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 2.5%;
+    border-bottom: 1px solid gray;
+    width: 40%;
+}
+
+.details h2 {
+    color: #a09fa0;
+    margin-bottom: 0;
+}
+
+.details span {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.reviews p {
+    padding: 10px;
+}
+
+
+.available {
+    display: flex;
+    gap: 5px;
+}
+
+
+.option {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.option p {
+    margin: 0;
+    padding: 0px 0px 0px 5px;
+}
+
+.text-var {
+    color: green;
+
+}
+
+.images img {
+    border: 1px gray solid;
+    padding: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style footer. Including div for store list and div for last foot page with payments. */
+footer {
+    margin-top: 30%;
+    width: 100%;
+}
+
+.cont-foot {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    gap: 100px;
+}
+
+.cont-foot ul li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px 0px 10px 0px;
+    color: #a09fa0;
+}
+
+.list-header {
+    font-weight: 900;
+    font-size: medium;
+    color: black;
+}
+
+.numbers-foot {
+    padding: 20px 10px 20px 0px;
+}
+
+.pay {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a09fa038;
+}
+
+.pay img {
+    width: 2.3%;
+}
+
+.payment img {
+    width: 100%;
+}
