@@ -1,11 +1,12 @@
+/* Background color body and layout settings */
 body {
-    margin-top: 0%;
     background-color: rgba(29, 22, 121, 0);
     width: 90%;
     margin: auto;
 }
 
-/* Style header */
+/* Style header. Including nav, list, logo, and right part header 
+    using Flexbox and positioning settings for the header */
 header,
 header ul,
 header li {
@@ -32,13 +33,14 @@ header li {
     padding: 20px;
 }
 
-/* Style main */
+/* Style main. Including all the sections, their elements and subelements styles, else contain the footer */
 main {
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 
+/* Section of the image and the main title. */
 section.one {
     display: flex;
     flex-flow: column;
@@ -52,6 +54,7 @@ section.one {
     background-size: cover;
 }
 
+/* Sub-elementos of the section.one */
 h1 {
     display: flex;
     justify-content: center;
@@ -68,7 +71,7 @@ a {
     font-weight: 900;
 }
 
-/* Style discounts */
+/* Style discounts. Including discounts section  */
 section.two-discounts {
     display: flex;
     flex-flow: row nowrap;
@@ -81,6 +84,7 @@ section.two-discounts {
     margin-bottom: 5%;
 }
 
+/* Div with class discount-1 and dicount-2.*/
 .discount-1 {
     min-height: 100%;
     width: 100%;
@@ -93,11 +97,13 @@ section.two-discounts {
     background-position: center center;
 }
 
+/* Subelemento of the Div 'discount-1' */
 .discount-1 h3 {
     color: green;
     font-size: 40px;
 }
 
+/* Div with class discount-1 and dicount-2.*/
 .discount-2 {
     min-height: 100%;
     width: 100%;
@@ -112,11 +118,13 @@ section.two-discounts {
 
 }
 
+/* Subelemento of the Div 'discount-2' */
 .discount-2 h3 {
     color: green;
     font-size: 40px;
 }
 
+/* Section with latest products */
 section.three-latest-products {
     display: flex;
     flex-flow: column;
@@ -128,6 +136,7 @@ section.three-latest-products {
     margin-bottom: 5%;
 }
 
+/* Header section */
 .head_section_three {
     display: flex;
     flex-flow: column;
@@ -138,6 +147,7 @@ section.three-latest-products {
     margin-bottom: 2%;
 }
 
+/* Div with images of the products latest */
 .latest_imges {
     display: flex;
     flex-flow: row nowrap;
@@ -147,6 +157,7 @@ section.three-latest-products {
     padding: 0px 100px 0px 100px;
 }
 
+/* Section with img, phrase, name */
 section.four-phrase {
     display: flex;
     flex-flow: column nowrap;
@@ -179,6 +190,7 @@ section.four-phrase span {
     color: gray;
 }
 
+/* Section include the news products, witt their head and images products */
 section.five-new-products {
     display: flex;
     flex-flow: column;
@@ -209,6 +221,8 @@ section.five-new-products {
     margin-bottom: 2%;
 }
 
+/* Section with h2, input and buttom for typing the email, else adjust the background image
+    using Flexbox and background image settings for the subscription section */
 section.six-subscribe {
     display: flex;
     flex-flow: column nowrap;
@@ -250,7 +264,7 @@ section.six-subscribe button {
     color: white;
 }
 
-
+/* Section with latest news, their header, imges, date, description and span*/
 section.seven-latest-news {
     display: flex;
     flex-flow: column wrap;
@@ -297,6 +311,8 @@ section.seven-latest-news {
 
 }
 
+/* Section with images of the products brands
+    using Flexbox and styling settings for the brands section  */
 section.brands {
     display: flex;
     flex-flow: row;
@@ -308,6 +324,7 @@ section.brands img {
     min-width: 25%;
 }
 
+/* Style footer. Including div for store list and div for last foot page with payments. */
 footer {
     width: 100%;
 }
@@ -348,9 +365,13 @@ footer {
     width: 2.3%;
 }
 
+.payment img {
+    width: 100%;
+}
 
-/* Responsive */
+/* Responsive media queries for different screen sizes */
 
+/* Adjusting styles for screen sizes up to 1670px */
 @media screen and (max-width: 1670px) {
 
     h1 {
@@ -397,9 +418,11 @@ footer {
 
     .cont-foot {
         flex-flow: row wrap;
+        justify-content: center;
     }
 }
 
+/* Adjusting styles for screen sizes up to 1398px */
 @media screen and (max-width: 1398px) {
 
     nav {
@@ -423,8 +446,10 @@ footer {
         padding: 0px
     }
 
+
 }
 
+/* Adjusting styles for screen sizes up to 968px */
 @media screen and (max-width: 968px) {
 
     header {
@@ -493,13 +518,14 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
+        padding: 0;
     }
 
     .cont-foot ul {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-bottom: 0px;
 
     }
 
@@ -519,6 +545,7 @@ footer {
 
 }
 
+/* Adjusting styles for screen sizes up to 528px */
 @media screen and (max-width: 528px) {
     section.one {
         margin: auto;
