@@ -311,16 +311,16 @@ section.seven-latest-news {
 
 }
 
-/* Section with images of the products brands
-    using Flexbox and styling settings for the brands section  */
-section.brands {
+/* Div with images of the products brands
+    using Flexbox and styling settings for the brands div */
+.brands {
     display: flex;
     flex-flow: row;
     justify-content: center;
     padding: 100px 0px 100px 0px;
 }
 
-section.brands img {
+.brands img {
     min-width: 25%;
 }
 
@@ -334,7 +334,6 @@ footer {
     flex-flow: row nowrap;
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: none;
     gap: 100px;
 }
 
@@ -345,8 +344,10 @@ footer {
     color: #a09fa0;
 }
 
-.cont-foot h5 {
+.list-header {
+    font-weight: 900;
     font-size: medium;
+    color: black;
 }
 
 .numbers-foot {
@@ -404,11 +405,11 @@ footer {
     }
 
 
-    section.brands {
+    .brands {
         flex-flow: row wrap;
     }
 
-    section.brands img {
+    .brands img {
         min-width: 25%;
     }
 
@@ -510,7 +511,7 @@ footer {
         color: white;
     }
 
-    section.brands img {
+    .brands img {
         padding: 15px;
     }
 
