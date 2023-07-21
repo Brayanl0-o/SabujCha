@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:wght@400;500;900&family=Work+Sans:wght@100;200;300;400;500;600&display=swap');
 
+/* font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Work Sans', sans-serif; */
+
 /* Background color body and layout settings */
 body {
     background-color: rgba(29, 22, 121, 0);
     margin: auto;
     margin-top: 1%;
-    /* font-family: 'Lora', serif;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Work Sans', sans-serif; */
 }
 
 /* Style header. Including nav, list, logo, and right part header 
     using Flexbox and positioning settings for the header */
-header,
-header ul,
-header li {
+header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -22,22 +21,6 @@ header li {
     margin: auto;
     margin-bottom: 1%;
     align-items: center;
-    list-style: none;
-    padding: 0px 45px 10px 0px;
-
-}
-
-.logo {
-    margin-right: 40%;
-}
-
-.right {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 20px;
-
 }
 
 nav {
@@ -50,21 +33,60 @@ nav {
     font-weight: 600;
 }
 
+nav ul,
 nav li {
-    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav li {
+    position: relative;
+    padding: 0px 20px 20px 20px;
+}
+
+nav li::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: transparent;
+}
+
+nav li:hover::after {
+    background-color: #529F0F;
 }
 
 nav a {
-    color: #696369;
     text-decoration: none;
+    color: #7c717c;
 }
 
-nav a :hover {
+nav a:hover {
     color: #529F0F;
-    text-decoration: none;
-    box-shadow: 0 1px 0px 0px rgb(14, 231, 25);
 }
 
+nav li:hover {
+    box-shadow: 0 1px 0px rgba(14, 231, 25, 0.5);
+    padding-bottom: 20px;
+}
+
+.logo {
+    margin-right: 40%;
+}
+
+.info-user {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+
+/* Style main. Including all the sections, their elements and subelements styles, else contain the footer */
 main {
     width: 100%;
     display: flex;
@@ -165,27 +187,13 @@ section.title-main p {
 }
 
 .text-var {
-
     color: green;
-
 }
 
 .images img {
     border: 1px gray solid;
     padding: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Style footer. Including div for store list and div for last foot page with payments. */
 footer {

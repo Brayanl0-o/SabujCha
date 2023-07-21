@@ -19,6 +19,21 @@ Brands: The Brands section showcases the logos of partner tea brands.
 
 Footer: The footer contains links to important pages, contact information, and payment methods.
 
+## Requirements and How to Run the Project
+To run the SabujCha web application, you need the following:
+
+Web Browser: Make sure you have a modern web browser installed on your device (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).
+
+Text Editor: You'll need a text editor to view and edit the HTML, CSS, and JavaScript files. You can use any text editor of your choice, such as Visual Studio Code, Sublime Text, or Atom.
+
+Download the Code: Download the project code from the repository or clone it using Git.
+
+File Structure: Ensure that all the necessary files (HTML, CSS, and JavaScript) are organized and placed in their respective folders.
+
+Open the HTML File: Locate the index.html file in the project folder and open it with your web browser. This will launch the SabujCha website.
+
+Alternatively, you can host the project on a web server or use a development environment like Node.js to serve the files locally.
+
 ## Technologies Used
 The following technologies were used to build the SabujCha website:
 

@@ -1,38 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:wght@400;500;900&family=Work+Sans:wght@100;200;300;400;500;600&display=swap');
 
+/* font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Work Sans', sans-serif; */
+
 /* Background color body and layout settings */
 body {
     background-color: rgba(29, 22, 121, 0);
     width: 90%;
     margin: auto;
-    /* font-family: 'Lora', serif;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Work Sans', sans-serif; */
 }
 
-/* Style header. Including nav, list, logo, and right part header 
+/* Style header. Including nav, list, logo, and info user part header 
     using Flexbox and positioning settings for the header */
-header,
-header ul,
-header li {
+header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 40px 5px 0px;
+}
+
+nav ul,
+nav li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav li {
     position: relative;
-    list-style: none;
-    padding: 10px 40px 10px 10px;
+    padding: 20px 40px 20px 15px;
+}
+
+
+nav li::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: transparent;
+}
+
+nav li:hover::after {
+    background-color: #529F0F;
 }
 
 nav a {
-    color: #696369;
+    font-weight: 600;
     text-decoration: none;
+    color: #7c717c;
 }
 
-nav a :hover {
+nav a:hover {
     color: #529F0F;
-    text-decoration: none;
-    box-shadow: 0 1px 0px 0px rgb(14, 231, 25);
+
+}
+
+nav li:hover {
+    color: #529F0F;
+    box-shadow: 0 1px 0px rgba(14, 231, 25, 0.5);
+    padding-bottom: 20px;
 }
 
 .logo {
@@ -41,12 +69,11 @@ nav a :hover {
     transform: translateX(-50%);
 }
 
-.right {
+.info-user {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     gap: 10px;
-    padding: 20px;
 }
 
 /* Style main. Including all the sections, their elements and subelements styles, else contain the footer */
@@ -57,12 +84,10 @@ main {
 }
 
 /* Section of the image and the main title. */
-section.one {
+section.hero {
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: auto;
-    gap: 0px;
     width: 100%;
     min-height: 615px;
     background-image: url(Imags/slider-2.jpg);
@@ -70,10 +95,8 @@ section.one {
     background-size: cover;
 }
 
-/* Sub-elementos of the section.one */
-h1 {
-    display: flex;
-    justify-content: center;
+/* Sub-elementos of the section.hero */
+section.hero h1 {
     margin-top: 12%;
     margin-bottom: 0px;
     text-align: center;
@@ -82,7 +105,9 @@ h1 {
     font-weight: 100;
 }
 
-a {
+section.hero a,
+section.hero button {
+    all: unset;
     text-decoration: underline;
     color: black;
     font-weight: 900;
@@ -101,62 +126,58 @@ section.two-discounts {
     margin-bottom: 5%;
 }
 
-/* Div with class discount-1 and dicount-2.*/
-.discount-1 {
+/* article with style discount*/
+article.discount-1,
+article.discount-2 {
     min-height: 100%;
     width: 100%;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     margin: auto;
-    padding: 45px 0px 45px 20px;
-    background-image: url(Imags/banner-1.png);
     background-position: center center;
+    padding: 45px 0px 45px 20px;
 }
 
+article.discount-1 {
+    background-image: url(Imags/banner-1.png);
+}
 
-/* Div with class discount-1 and dicount-2.*/
-.discount-2 {
-    min-height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    align-items: flex-start;
-    margin: auto;
-    padding: 45px 0px 45px 20px;
+article.discount-2 {
     background-image: url(Imags/banner-2.png);
-    background-position: center center;
 }
 
 /* Subelemento of the Div 'discount-1' */
-.discount-1 h3,
-.discount-2 h3 {
+.two-discounts h3 {
     color: green;
     font-size: 40px;
     font-family: 'Playfair Display', serif;
 }
 
-.discount-1 p,
-.discount-2 p {
+article.discount-1 p,
+article.discount-2 p {
     font-family: 'Lora', serif;
+    color: black;
 }
 
-/* Section with latest products */
-section.three-latest-products {
+article.discount-1 a,
+article.discount-2 a {
+    text-decoration: none;
+}
+
+/* Section with latest products and section with new products */
+section.latest-products,
+section.five-new-products {
     display: flex;
     flex-flow: column;
     align-items: center;
-    gap: 0px;
     width: 100%;
-    padding: 0px;
     background-image: url(Imags/bg-1.jpg);
-    margin-bottom: 5%;
-
+    margin-bottom: 0%;
 }
 
-/* Header section */
-.head_section_three {
+/* Header sections and ther subelements*/
+.head_section {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -164,44 +185,47 @@ section.three-latest-products {
     width: 30%;
     margin: auto;
     margin-bottom: 2%;
-
 }
 
-.head_section_three h2 {
+.head_section h2 {
     font-family: 'Playfair Display', serif;
 }
 
-.head_section_three p {
+.head_section p {
     font-family: 'Lora', serif;
 }
 
-/* Div with images of the products latest */
-.latest_imges {
+/* article with images and subelements of news and latest products*/
+.latest_images,
+.new_imges_products {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     margin-bottom: 2%;
-    padding: 0px 100px 0px 100px;
+    width: 80%;
 }
 
-.latest_imges a {
+.latest_images a,
+.new_imges_products a {
     font-family: 'Work Sans', sans-serif;
     text-decoration: none;
+    color: black;
 }
 
 /* Section with img, phrase, name */
 section.four-phrase {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 5%;
+    margin: 4% 0% 4% 0%;
 }
 
 section.four-phrase img {
-    width: 5%;
+    width: 13%;
 }
 
 section.four-phrase p {
@@ -212,63 +236,20 @@ section.four-phrase p {
 }
 
 section.four-phrase h4 {
-    border: 0px;
-    padding: 20px;
     font-size: 15px;
     font-weight: 900;
     color: black;
     font-family: 'Playfair Display', serif;
 }
 
-
 section.four-phrase span {
     color: gray;
     font-family: 'Lora', serif;
 }
 
-/* Section include the news products, witt their head and images products */
+/* Section news products, the styles of the "latest products" section are reused for sub-elements.*/
 section.five-new-products {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 0px;
-    padding: 20px;
     background-color: rgba(228, 228, 228, 0.555);
-    margin-bottom: 0%;
-}
-
-.head_section_five {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    text-align: center;
-    width: 40%;
-    margin: auto;
-    margin-bottom: 2%;
-}
-
-.head_section_five h2 {
-    font-family: 'Playfair Display', serif;
-}
-
-.head_section_five p {
-    font-family: 'Lora', serif;
-}
-
-.new_imges_products {
-    width: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 2%;
-
-}
-
-.new_imges_products a {
-    font-family: 'Work Sans', sans-serif;
-    text-decoration: none;
 }
 
 /* Section with h2, input and buttom for typing the email, else adjust the background image
@@ -328,13 +309,7 @@ section.seven-latest-news {
     width: 100%;
 }
 
-.head_section_seven {
-    font-family: 'Playfair Display', serif;
-    margin: 2% 0% 2% 0%;
-    text-align: center;
-}
-
-.new_imges_latest {
+.new_images_latest {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -342,12 +317,17 @@ section.seven-latest-news {
     margin-bottom: 2%;
 }
 
-.new_imges_latest h3 {
+.new_images_latest h3 {
     font-family: 'Work Sans', sans-serif;
 }
 
-.new-1 {
+article.new-1 {
     flex: 0 0 25%;
+}
+
+article.new-1 span {
+    font-weight: 800;
+    text-decoration: underline;
 }
 
 .date {
@@ -363,12 +343,6 @@ section.seven-latest-news {
     width: 60%;
 }
 
-.new-1 span {
-    font-weight: 800;
-    text-decoration: underline;
-
-}
-
 /* Div with images of the products brands
     using Flexbox and styling settings for the brands div */
 .brands {
@@ -380,6 +354,7 @@ section.seven-latest-news {
 
 .brands img {
     min-width: 25%;
+    padding: 10px;
 }
 
 /* Style footer. Including div for store list and div for last foot page with payments. */
@@ -393,6 +368,7 @@ footer {
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
     gap: 100px;
+    margin-bottom: 5%;
 }
 
 .cont-foot ul li {
@@ -435,42 +411,34 @@ footer {
 /* Adjusting styles for screen sizes up to 1670px */
 @media screen and (max-width: 1670px) {
 
-    h1 {
-        justify-content: center;
-        margin-top: 12%;
-        margin-bottom: 0px;
-        text-align: center;
-        font-size: 60px;
-        font-weight: 100;
+    body {
+        margin-top: 1%;
     }
 
-    a {
-        text-decoration: underline;
-        color: black;
-        font-weight: 900;
+    nav {
+        width: 10%;
+        font-size: smaller;
     }
 
-    .new_imges_latest {
-        flex-flow: row wrap;
+    nav li {
+        padding: 0px 40px 0px 0px;
+    }
+
+    .new_images_latest {
         gap: 20px;
 
     }
 
-    .new-1 {
+    article.new-1 {
         margin-bottom: 2%;
     }
 
     .description {
-        width: 40%;
+        width: 80%;
     }
-
 
     .brands {
         flex-flow: row wrap;
-    }
-
-    .brands img {
-        min-width: 25%;
     }
 
     footer {
@@ -480,20 +448,15 @@ footer {
     .cont-foot {
         flex-flow: row wrap;
         justify-content: center;
+
     }
 }
 
 /* Adjusting styles for screen sizes up to 1398px */
 @media screen and (max-width: 1398px) {
 
-    nav {
-        display: none;
-    }
-
-    header {
-        display: flex;
-        flex-flow: row;
-        align-items: center;
+    nav li {
+        padding: 0px 15px 0px 0px;
     }
 
     .logo {
@@ -501,79 +464,63 @@ footer {
         transform: none;
     }
 
-    .latest_imges {
-        justify-content: center;
-        flex-flow: row wrap;
-        padding: 0px;
+    section.two-discounts {
+        flex-flow: column wrap;
 
     }
 
+    .two-discounts h3,
+    p {
+        margin-left: 150px;
+    }
 
+    .discount-1,
+    .discount-2 {
+        background-repeat: no-repeat;
+
+    }
 }
 
 /* Adjusting styles for screen sizes up to 968px */
 @media screen and (max-width: 968px) {
+
+    nav {
+        display: none;
+    }
 
     header {
         flex-flow: row;
         align-items: center;
     }
 
-    section.one {
-        margin: auto;
-        gap: 0px;
-        width: 100%;
-        min-height: 505px;
-    }
-
-    h1 {
+    section.hero h1 {
         margin-top: 30%;
-        margin-bottom: 0px;
         text-align: center;
         font-size: 40px;
         font-weight: 100;
     }
 
-    a {
-        text-decoration: underline;
-        color: black;
-        font-weight: 900;
-    }
-
     section.two-discounts {
         flex-flow: row wrap;
-
+        width: 80%;
     }
 
-    .head_section_three {
-        width: 70%;
+    .two-discounts h3,
+    p {
+        margin-left: 40px;
+        color: rgb(14, 48, 9);
+    }
+
+    .head_section {
+        width: 80%;
     }
 
     section.four-phrase p {
         width: 80%;
     }
 
-    .head_section_five p {
-        text-align: center;
-        width: 200%;
-
-    }
-
     section.six-subscribe input {
         width: auto;
-        height: 50px;
-        background: none;
-        border-right: 0px;
-    }
-
-    section.six-subscribe button {
-        text-align: center;
-        background-color: black;
-        color: white;
-    }
-
-    .brands img {
-        padding: 15px;
     }
 
     .cont-foot {
@@ -581,14 +528,6 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         padding: 0;
-    }
-
-    .cont-foot ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 0px;
-
     }
 
     .pay {
@@ -609,44 +548,13 @@ footer {
 
 /* Adjusting styles for screen sizes up to 528px */
 @media screen and (max-width: 528px) {
-    section.one {
-        margin: auto;
-        gap: 0px;
-        width: 100%;
-        min-height: 505px;
-    }
 
-    h1 {
+    section.hero h1 {
         margin-top: 50%;
-        text-align: center;
-        font-size: 35px;
-        font-weight: 100;
     }
 
-    a {
-        text-decoration: underline;
-        color: black;
-        font-weight: 900;
-        margin-bottom: 40%;
+    .two-discounts h3,
+    p {
+        margin-left: 0px;
     }
-
-    header {
-        flex-flow: row;
-        align-items: center;
-    }
-
-    .new_imges_latest {
-        flex-flow: row wrap;
-
-
-    }
-
-    .new-1 {
-        margin-bottom: 2%;
-    }
-
-    .description {
-        width: 80%;
-    }
-
 }
