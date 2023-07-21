@@ -250,29 +250,6 @@ main {
     color: green;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    margin: 0 auto;
-}
-
-button {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 .tags {
     font-family: 'Lora', serif;
     padding: 0px;
@@ -285,22 +262,27 @@ button img {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    gap: 2px;
+    gap: 4px;
     width: 80%;
 
 }
 
 .buttons button {
+
     display: flex;
     justify-content: flex-start;
     width: auto;
     color: whitesmoke;
-    font-size: smaller;
+    flex: 1;
     align-items: center;
 }
 
+.buttons span {
+    font-size: x-small;
+}
+
 .buttons img {
-    width: 35%;
+    width: 30%;
 }
 
 .twitter {
@@ -494,5 +476,19 @@ footer {
     .down-slider {
         width: auto;
         max-width: 400px;
+    }
+
+    .details {
+        width: auto;
+        align-items: center;
+    }
+
+
+    .buttons img {
+        width: 100%;
+    }
+
+    .buttons span {
+        display: none;
     }
 }
