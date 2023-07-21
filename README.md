@@ -1,6 +1,7 @@
 # SabujCha
 SabujCha is a web application built using HTML, CSS, and JavaScript. The website is designed to offer a wide selection of natural tea products to customers, promoting a healthy lifestyle. The website is responsive and can be accessed from various devices, including desktops, tablets, and mobile phones.
 
+
 ## Features
 Navigation: The website features a navigation bar with links to various sections, including Home, About, Blog, Pages, and Contact.
 
@@ -19,6 +20,7 @@ Brands: The Brands section showcases the logos of partner tea brands.
 
 Footer: The footer contains links to important pages, contact information, and payment methods.
 
+
 ## Requirements and How to Run the Project
 To run the SabujCha web application, you need the following:
 
@@ -34,6 +36,7 @@ Open the HTML File: Locate the index.html file in the project folder and open it
 
 Alternatively, you can host the project on a web server or use a development environment like Node.js to serve the files locally.
 
+
 ## Technologies Used
 The following technologies were used to build the SabujCha website:
 
@@ -42,8 +45,11 @@ CSS
 
 License
 The SabujCha project is licensed under the MIT License.
+
 ### References
-<!-- Add link to drive with images -->
+https://drive.google.com/drive/u/1/folders/1PPE-5YR7mzAN3NSfOo4ElC3hp41ppP-F
+
+
 #### Contact
 For any inquiries or questions, you can reach out to the project maintainer:
 
