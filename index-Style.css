@@ -136,6 +136,7 @@ article.discount-2 {
     align-items: flex-start;
     margin: auto;
     background-position: center center;
+    background-size: cover;
     padding: 45px 0px 45px 20px;
 }
 

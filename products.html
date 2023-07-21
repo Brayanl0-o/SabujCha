@@ -37,20 +37,36 @@
     </header>
     <main>
         <!--Title main and text with route -->
-        <section class="title-main">
+        <div class="title-main">
             <h1>SINGLE PRODUCT</h1>
             <p>Home / Single Product</p>
-        </section>
+        </div>
+
         <!-- Product details, like name, price, categories, tags, images and more. -->
         <section class="product-presentation">
 
-            <!-- Add future slider -->
-            <div class="images">
-                <img src="Imags/product-1.jpg" alt="">
+            <!-- Slider; images products  -->
+            <div class="slider">
+                <div class="main-image">
+                    <img src="Imags/product-1.jpg" alt="Imagen 1">
+                </div>
+                <div class="down-slider">
+
+                    <button class="prev-arrow">&#10094;</button>
+
+                    <div class="thumbnails">
+                        <img src="Imags/product-2.jpg" alt="Imagen 2">
+                        <img src="Imags/product-3.jpg" alt="Imagen 3">
+                        <img src="Imags/product-4.jpg" alt="Imagen 4">
+                        <img src="Imags/product-5.jpg" alt="Imagen 5">
+                    </div>
+
+                    <button class="next-arrow">&#10095;</button>
+
+                </div>
             </div>
-
-
-            <div class="details">
+            <!-- Details prodyct -->
+            <article class="details">
                 <h2>Nature Close Tea</h2>
                 <div class="reviews">
                     <p>32 Reviews </p>
@@ -67,29 +83,50 @@
                     porro,
                     odio mollitia possimus beatae iusto, explicabo omnis dolor saepe</p>
                 <div class="options">
-                    <div class="option">
-                        <input type="checkbox">
-                        <p>Protection Plan: </p>
-                        <p class="text-var">2 year $4.99 </p>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <p>Remote Holder: </p>
-                        <p class="text-var">$9.99 </p>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <p>Koral Alexa Voice Remote Case: </p>
-                        <p class="text-var">Red $16.99 </p>
-                    </div>
-                    <div class="option">
-                        <input type="checkbox">
-                        <p>Amazon Basics HD Antenna: </p>
-                        <p class="text-var">25 Mile $14.99 </p>
-                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            <p>Protection Plan:</p>
+                            <p class="text-var">2 year $4.99 </p>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Remote Holder:</p>
+                            <p class="text-var">$9.99 </p>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Koral Alexa Voice Remote Case:</p>
+                            <p class="text-var">Red $16.99 </p>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Amazon Basics HD Antenna:</p>
+                            <p class="text-var">25 Mile $14.99 </p>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <!-- Tags and categories product -->
+                <div class="tags">
+                    <p>Categories: Green, Herbal, Loose, Mate, Organic</p>
+                    <p>Tags: Oolong , Pu'erh, Dark, Special</p>
+                </div>
+                <!-- Buttons with social networks -->
+                <div class="buttons">
+                    <button class="twitter"><img src="Imags/twiter.png" alt="Twitter">Tweet</button>
+                    <button class="facebook">
+                        <img src="Imags/Facebook_f_logo_(2019).svg.png" alt="Facebook">Share
+                    </button>
+                    <button class="google-plus">
+                        <img src="Imags/google+.png" alt="Google+">Google+
+                    </button>
+                    <button class="pinterest">
+                        <img src="Imags/pinterest.png" alt="Pinterest">Pinterest
+                    </button>
+                </div>
+            </article>
         </section>
+
         <!-- Section with description, tags and products review -->
         <section class="more-info" style="display: none;">
             <div class="head">
@@ -97,12 +134,17 @@
                 <legend>Tags</legend>
                 <legend>Reviews</legend>
             </div>
-
+            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in esse, natus ex
+                saepe fugiat excepturi explicabo at porro commodi atque. Molestias id atque eveniet, saepe aspernatur
+                voluptates laborum facere!</div>
+            <div class="tags">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae autem consectetur
+                unde a, modi amet eligendi quidem temporibus atque fuga alias. Quidem fuga qui veniam possimus a ut
+                libero recusandae.</div>
+            <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, porro impedit. Et
+                inventore obcaecati vitae, placeat molestias sit aut eos ex laborum culpa libero repellat ullam numquam
+                officiis? Doloremque, illo.</div>
         </section>
-        <!--Section with related products, their details and images-->
-        <section class="related-products">
 
-        </section>
 
         <!-- Section with all content of the footer; links to import information, general information and pay information -->
         <footer>
@@ -137,10 +179,8 @@
                 <ul>
                     <li class="list-header">Contact Us</li>
                     <li>Your addres goes here</li>
-                    <div class="numbers-foot">
-                        <li>0123456789</li>
-                        <li>0123456789</li>
-                    </div>
+                    <li class="numbers-foot">0123456789</li>
+                    <li class="numbers-foot">0123456789</li>
                     <li>demo@example.com</li>
                     <li>demo@example.com</li>
                 </ul>
@@ -154,6 +194,44 @@
             </div>
         </footer>
     </main>
+    <!-- Script responsible for making the slider work, using the classes of the main slider and the bottom slider -->
+    <script>
+        const thumbnails = document.querySelectorAll(".thumbnails img");
+        const mainImage = document.querySelector(".main-image img");
+        const prevArrow = document.querySelector(".prev-arrow");
+        const nextArrow = document.querySelector(".next-arrow");
+        let currentImageIndex = 0;
+
+
+
+        // Function to display the current image
+        function showImage(index) {
+
+            // Remove the 'active' class from all thumbnails
+            thumbnails.forEach(item => item.classList.remove("active"));
+
+            // Add the 'active' class to the selected thumbnail
+            thumbnails[index].classList.add("active");
+
+            // Change the main image with the selected thumbnail
+            mainImage.src = thumbnails[index].src;
+            mainImage.alt = thumbnails[index].alt;
+        }
+
+        //// Event listener for the navigation arrows
+        prevArrow.addEventListener("click", () => {
+            currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
+            showImage(currentImageIndex);
+        });
+
+        nextArrow.addEventListener("click", () => {
+            currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
+            showImage(currentImageIndex);
+        });
+
+        // Show the first image when the page loads
+        showImage(currentImageIndex);
+    </script>
 </body>
 
 </html>
