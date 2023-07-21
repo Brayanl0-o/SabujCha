@@ -114,7 +114,7 @@ section.hero button {
 }
 
 /* Style discounts. Including discounts section  */
-section.two-discounts {
+.two-discounts {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -386,7 +386,7 @@ footer {
 }
 
 .numbers-foot {
-    padding: 20px 10px 20px 0px;
+    margin: 15px;
 }
 
 .pay {
@@ -434,7 +434,8 @@ footer {
     }
 
     .description {
-        width: 80%;
+        margin-left: 0px;
+        width: auto;
     }
 
     .brands {
@@ -464,7 +465,7 @@ footer {
         transform: none;
     }
 
-    section.two-discounts {
+    .two-discounts {
         flex-flow: column wrap;
 
     }
@@ -500,7 +501,7 @@ footer {
         font-weight: 100;
     }
 
-    section.two-discounts {
+    .two-discounts {
         flex-flow: row wrap;
         width: 80%;
     }
