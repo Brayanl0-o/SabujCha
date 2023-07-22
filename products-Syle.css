@@ -195,7 +195,6 @@ main {
     display: flex;
     flex-flow: column;
     padding-bottom: 2.5%;
-    border-bottom: 1px solid gray;
     width: 40%;
 }
 
@@ -228,6 +227,7 @@ main {
 .options {
     display: flex;
     flex-flow: column wrap;
+    border-bottom: 1px solid gray;
 }
 
 .options ul {
@@ -305,10 +305,80 @@ main {
     background-color: #BD081C;
 }
 
+.more-info {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 3%;
+    width: 60%;
+}
+
+.head {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.head h2 {
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+
+/* article with images and subelements of news and latest products*/
+.related_products {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 2%;
+    width: 60%;
+}
+
+/* Header sections and ther subelements*/
+.head_section {
+    width: 100%;
+}
+
+.head_section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: xx-large;
+    text-decoration: underline;
+    font-weight: 100;
+}
+
+.new_images_products {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new_images_products img {
+    border: 1px gray solid;
+}
+
+.related_products a {
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+
 
 /* Style footer. Including div for store list and div for last foot page with payments. */
 footer {
-    margin-top: 20%;
+    background-color: #8f878f36;
+    margin-top: 2%;
     width: 100%;
 }
 
@@ -318,7 +388,8 @@ footer {
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
     gap: 100px;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
 
 .cont-foot ul li {
@@ -398,6 +469,11 @@ footer {
         transform: none;
     }
 
+    .new_images_products {
+
+        flex-flow: row wrap;
+
+    }
 }
 
 /* Adjusting styles for screen sizes up to 1070px */

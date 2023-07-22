@@ -123,28 +123,82 @@
             </article>
         </div>
 
-        <!-- Section with description, tags and products review -->
-        <div class="more-info" style="display: none;">
+        <!-- Div with header and content description, tags and reviews -->
+        <div class="more-info">
             <div class="head">
-                <p>Description</p>
-                <p>Tags</p>
-                <p>Reviews</p>
+                <h2 class="header" data-target="description">Description</h2>
+                <h2 class="header" data-target="tags">Tags</h2>
+                <h2 class="header" data-target="reviews">Reviews</h2>
             </div>
-            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in esse, natus
-                ex
-                saepe fugiat excepturi explicabo at porro commodi atque. Molestias id atque eveniet, saepe
-                aspernatur
-                voluptates laborum facere!</div>
-            <div class="tags">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae autem
-                consectetur
-                unde a, modi amet eligendi quidem temporibus atque fuga alias. Quidem fuga qui veniam possimus a ut
-                libero recusandae.</div>
-            <div class="reviews">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, porro
-                impedit. Et
-                inventore obcaecati vitae, placeat molestias sit aut eos ex laborum culpa libero repellat ullam
-                numquam
-                officiis? Doloremque, illo.</div>
+
+            <!-- Content description-->
+            <div class="content" data-content="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, consequuntur velit inventore eaque
+                praesentium odio nulla dolor soluta porro eveniet eius cumque iste voluptatibus repudiandae cupiditate
+                accusamus assumenda ipsa illum! <br> <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aperiam doloribus ab hic, tempora
+                corrupti natus incidunt rerum, sunt id quod itaque, a unde fuga beatae nostrum expedita suscipit ad!
+                <br><br>
+                - Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi corrupti <br>
+                - voluptas aperiam, illum nobis nesciunt natus minus et sit voluptate non voluptatem commodi modi <br>
+                - explicabo numquam provident quas, consequatur <br>
+            </div>
+
+            <!-- Content tags -->
+            <div class="content" data-content="tags" style="display: none;">
+                <ul>
+                    <li>Etiqueta 1</li>
+                    <li>Etiqueta 2</li>
+                    <li>Etiqueta 3</li>
+                </ul>
+            </div>
+
+            <!-- Content revies -->
+            <div class="content" data-content="reviews" style="display: none;">
+                <p>Excelente producto, lo recomiendo ampliamente.</p>
+                <p>No me gustó mucho, esperaba más calidad.</p>
+            </div>
         </div>
+
+
+
+        <div class="related_products">
+
+            <div class="head_section">
+                <h4>Related Products</h4>
+            </div>
+            <!-- Product cards-->
+            <div class="new_images_products">
+                <article>
+                    <a href="products.html">
+                        <img src="Imags/product-1.jpg" alt="">
+                        <h3>Nature Close Tea</h3>
+                    </a>
+                    <span>$100.00 - </span>
+                    <span style="text-decoration: line-through;">$120.000</span>
+                </article>
+                <article>
+                    <img src="Imags/product-2.jpg" alt="">
+                    <h3>Nature Close Tea</h3>
+                    <span>$100.00 - </span>
+                    <span style="text-decoration: line-through;">$120.000</span>
+                </article>
+                <article>
+                    <img src="Imags/product-3.jpg" alt="">
+                    <h3>Nature Close Tea</h3>
+                    <span>$100.00 - </span>
+                    <span style="text-decoration: line-through;">$120.000</span>
+                </article>
+                <article>
+                    <img src="Imags/product-4.jpg" alt="">
+                    <h3>Nature Close Tea</h3>
+                    <span>$100.00 - </span>
+                    <span style="text-decoration: line-through;">$120.000</span>
+                </article>
+            </div>
+        </div>
+        </section>
+
 
 
         <!-- Section with all content of the footer; links to import information, general information and pay information -->
@@ -233,6 +287,29 @@
         // Show the first image when the page loads
         showImage(currentImageIndex);
     </script>
-</body>
+
+
+
+    <!-- Script to interaction with 'description','tags' and 'reviews' -->
+    <script>
+        // Obtenemos todos los encabezados y contenidos
+        const headers = document.querySelectorAll('.header');
+        const contents = document.querySelectorAll('.content');
+
+        // Agregamos un evento de clic a cada encabezado
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                // Ocultamos todos los contenidos
+                contents.forEach(content => content.style.display = 'none');
+
+                // Obtenemos el atributo 'data-target' del encabezado clicado
+                const target = header.getAttribute('data-target');
+
+                // Mostramos el contenido correspondiente al encabezado clicado
+                const contentToShow = document.querySelector(`[data-content="${target}"]`);
+                contentToShow.style.display = 'block';
+            });
+        });
+    </script>
 
 </html>

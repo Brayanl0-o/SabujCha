@@ -360,6 +360,8 @@ article.new-1 span {
 
 /* Style footer. Including div for store list and div for last foot page with payments. */
 footer {
+    background-color: #8f878f36;
+    margin-top: 2%;
     width: 100%;
 }
 
@@ -369,7 +371,8 @@ footer {
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
     gap: 100px;
-    margin-bottom: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .cont-foot ul li {
