@@ -81,7 +81,7 @@
                 <div class="options">
                     <ul>
                         <li>
-                            <input type="checkbox">
+                            <input type="checkbox" class="checkbox">
                             <p>Protection Plan:</p>
                             <p class="text-var">2 year $4.99 </p>
                         </li>
@@ -132,7 +132,7 @@
             </div>
 
             <!-- Content description-->
-            <div class="content" data-content="description">
+            <p class="content" data-content="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, consequuntur velit inventore eaque
                 praesentium odio nulla dolor soluta porro eveniet eius cumque iste voluptatibus repudiandae cupiditate
                 accusamus assumenda ipsa illum! <br> <br>
@@ -142,7 +142,7 @@
                 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi corrupti <br>
                 - voluptas aperiam, illum nobis nesciunt natus minus et sit voluptate non voluptatem commodi modi <br>
                 - explicabo numquam provident quas, consequatur <br>
-            </div>
+            </p>
 
             <!-- Content tags -->
             <div class="content" data-content="tags" style="display: none;">
@@ -160,8 +160,7 @@
             </div>
         </div>
 
-
-
+        <!-- Div with head and images related products -->
         <div class="related_products">
 
             <div class="head_section">
@@ -197,8 +196,6 @@
                 </article>
             </div>
         </div>
-        </section>
-
 
 
         <!-- Section with all content of the footer; links to import information, general information and pay information -->
@@ -239,7 +236,6 @@
                     <li>demo@example.com</li>
                     <li>demo@example.com</li>
                 </ul>
-
             </div>
             <div class="pay">
                 <p><img src="Imags/icon-copyright.png" alt="">2023 <b>SubjCha</b> Made By Brayan</p>
@@ -249,6 +245,8 @@
             </div>
         </footer>
     </main>
+
+
     <!-- Script responsible for making the slider work, using the classes of the main slider and the bottom slider -->
     <script>
         const thumbnails = document.querySelectorAll(".thumbnails img");
@@ -287,7 +285,6 @@
         // Show the first image when the page loads
         showImage(currentImageIndex);
     </script>
-
 
 
     <!-- Script to interaction with 'description','tags' and 'reviews' -->

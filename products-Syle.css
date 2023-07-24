@@ -230,6 +230,10 @@ main {
     border-bottom: 1px solid gray;
 }
 
+.checkbox {
+    border-radius: 50%;
+}
+
 .options ul {
     padding-left: 0;
 }
@@ -264,11 +268,9 @@ main {
     justify-content: space-evenly;
     gap: 4px;
     width: 80%;
-
 }
 
 .buttons button {
-
     display: flex;
     justify-content: flex-start;
     width: auto;
@@ -316,15 +318,25 @@ main {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    gap: 50px;
-    border-bottom: 1px solid gray;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.head h2:hover {
+    color: #529F0F;
+    box-shadow: 0 1px 0px #529F0F;
 }
 
 .head h2 {
+    width: 100%;
+    padding: 20px;
     cursor: pointer;
+    color: #615d61;
+    border-bottom: 1px solid gray;
 }
 
-.content {
+p.content {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -332,7 +344,6 @@ main {
     width: 100%;
     margin-top: 5%;
 }
-
 
 
 /* article with images and subelements of news and latest products*/
@@ -372,7 +383,6 @@ main {
     text-decoration: none;
     color: black;
 }
-
 
 
 /* Style footer. Including div for store list and div for last foot page with payments. */
@@ -470,9 +480,7 @@ footer {
     }
 
     .new_images_products {
-
         flex-flow: row wrap;
-
     }
 }
 
@@ -491,6 +499,16 @@ footer {
     .details {
         width: 80%;
         align-items: center;
+    }
+
+    .more-info {
+        width: 60%;
+    }
+
+    .head {
+        margin: auto;
+        font-size: small;
+        width: 50%;
     }
 }
 
@@ -558,7 +576,6 @@ footer {
         width: auto;
         align-items: center;
     }
-
 
     .buttons img {
         width: 100%;
